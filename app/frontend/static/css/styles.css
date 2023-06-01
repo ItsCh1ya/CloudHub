@@ -1,0 +1,70 @@
+/* styles.css */
+
+body {
+  line-height: 1.5;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  padding-inline: 20%;
+
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+}
+
+.switch-button {
+  margin-left: 10px;
+}
+
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+.file-list-item {
+  display: flex;
+  align-items: center;
+}
+

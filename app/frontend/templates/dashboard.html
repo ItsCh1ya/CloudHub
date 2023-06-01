@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudHub - Dashboard</title>
+  <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to CloudHub</h1>
+    <p>Cloud-based File Storage</p>
+  </header>
+
+  <main style="display: block;">
+
+    <section>
+      <h2>Upload File</h2>
+      <form class="file-upload-form" action="/dashboard" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" class="file-upload-input" required>
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+    {% if files_with_size %}
+    <br>
+    <section>
+      <h2>My Files:</h2>
+      <div class="file-list">
+        {% for filename, filesize in files_with_size %}
+        <div class="file-list-item">
+          <a href="/api/receive_file/{{filename}}">
+            <img src="/static/img/file-icon.png" alt="File Icon" class="file-icon" style="width:60px">
+          </a>
+          <div class="file-details">
+            <p class="file-name">{{ filename }}</p>
+            <p class="file-size">{{ filesize }} GB</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>    
+    {% endif %}
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 CloudHub. No rights reserved.</p>
+  </footer>
+</body>
+
+</html>
